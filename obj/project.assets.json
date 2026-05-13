@@ -15,16 +15,6 @@
           }
         }
       },
-      "Microsoft.AspNetCore.App.Internal.Assets/10.0.6": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.AspNetCore.App.Internal.Assets.props": {},
-          "buildTransitive/Microsoft.AspNetCore.App.Internal.Assets.targets": {}
-        },
-        "buildMultiTargeting": {
-          "buildMultiTargeting/Microsoft.AspNetCore.App.Internal.Assets.targets": {}
-        }
-      },
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore/10.0.6": {
         "type": "package",
         "dependencies": {
@@ -872,29 +862,6 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
-      ]
-    },
-    "Microsoft.AspNetCore.App.Internal.Assets/10.0.6": {
-      "sha512": "3jRLKtAXwSCVDX0vUmGTDwcbSmL05jtf5vUHB9QXpw3wDbT0qU0dUJyKAOKgvwW3j0FI+aHHMbKIZCM63SPkOA==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.app.internal.assets/10.0.6",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "THIRD-PARTY-NOTICES.TXT",
-        "_framework/blazor.server.js",
-        "_framework/blazor.server.js.map",
-        "_framework/blazor.web.js",
-        "_framework/blazor.web.js.map",
-        "_framework/blazor.webassembly.js",
-        "_framework/blazor.webassembly.js.map",
-        "build/Microsoft.AspNetCore.App.Internal.Assets.props",
-        "build/Microsoft.AspNetCore.App.Internal.Assets.targets",
-        "buildMultiTargeting/Microsoft.AspNetCore.App.Internal.Assets.targets",
-        "buildTransitive/Microsoft.AspNetCore.App.Internal.Assets.targets",
-        "microsoft.aspnetcore.app.internal.assets.10.0.6.nupkg.sha512",
-        "microsoft.aspnetcore.app.internal.assets.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore/10.0.6": {
@@ -2535,7 +2502,6 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "Microsoft.AspNetCore.App.Internal.Assets >= 10.0.6",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 10.0.6",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 10.0.6",
       "Microsoft.EntityFrameworkCore.Design >= 10.0.6",
@@ -2588,12 +2554,6 @@
       "net10.0": {
         "targetAlias": "net10.0",
         "dependencies": {
-          "Microsoft.AspNetCore.App.Internal.Assets": {
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "[10.0.6, )",
-            "autoReferenced": true
-          },
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
             "target": "Package",
             "version": "[10.0.6, )"
