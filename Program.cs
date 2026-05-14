@@ -1,30 +1,13 @@
-using Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+using MiProyectoAcademico.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlite("Data Source=app.db"));
+
 var app = builder.Build();
 
-List<Estudiante> estudiantes = new()
-{
-    new Estudiante
-    {
-        Id = 1,
-        Nombre = "Juan",
-        Apellido = "Perez"
-    },
-    new Estudiante
-    {
-        Id = 2,
-        Nombre = "Maria",
-        Apellido = "Lopez"
-    }
-};
-
-app.MapGet("/", () => "Proyecto funcionando");
-
-app.MapGet("/estudiantes", () =>
-{
-    return estudiantes;
-});
+app.MapGet("/", () => "API funcionando 🔥");
 
 app.Run();

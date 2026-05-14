@@ -1,17 +1,26 @@
-using Domain.Enums;
+using MiProyectoAcademico.Domain.Enums;
 
-namespace Domain.Entities
+namespace MiProyectoAcademico.Domain.Entities;
+
+public class Estudiante
 {
-    public class Estudiante
-    {
-        public int Id { get; set; }
+    // ── Identificador único ───────────────────────────────
+    public int Id { get; set; }
 
-        public string Nombre { get; set; } = string.Empty;
+    // ── Datos del estudiante ──────────────────────────────
+    public string Nombre         { get; set; } = string.Empty;
+    public string Apellido       { get; set; } = string.Empty;
+    public string Matricula      { get; set; } = string.Empty;
+    public string Email          { get; set; } = string.Empty;
+    public DateTime FechaIngreso { get; set; }
 
-        public string Apellido { get; set; } = string.Empty;
+    // ── Estado usando un Enum (lo veremos más adelante) ───
+    public EstadoEstudiante Estado { get; set; } = EstadoEstudiante.Activo;
 
-        public string Documento { get; set; } = string.Empty;
+    // ── Auditoría ─────────────────────────────────────────
+    public DateTime CreadoEn    { get; set; } = DateTime.UtcNow;
+    public DateTime? ActualizadoEn { get; set; }
 
-        public EstadoEstudiante Estado { get; set; }
-    }
+    // ── Navegación (relaciones) ───────────────────────────
+    public ICollection<Matriculacion> Matriculaciones { get; set; } = new List<Matriculacion>();
 }

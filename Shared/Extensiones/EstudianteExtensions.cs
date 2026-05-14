@@ -1,23 +1,29 @@
-using Shared.DTOs;
-using Domain.Entities;
-using Domain.Enums; 
+namespace MiProyectoAcademico.Shared.Extensions;
+using MiProyectoAcademico.Domain.Entities;
+using MiProyectoAcademico.Shared.DTOs;
 
-namespace Shared.Extensions
+/// <summary>
+/// Métodos de conversión entre Entidad y DTO.
+/// </summary>
+public static class EstudianteExtensions
 {
-    public static class EstudianteExtensions
-    {
-        public static EstudianteDto ToDto(this Estudiante estudiante)
+    public static EstudianteDto ToDto(this Estudiante e)
+        => new()
         {
-            return new EstudianteDto
-            {
-                Id = estudiante.Id,
-                NombreCompleto =
-                    $"{estudiante.Nombre} {estudiante.Apellido}",
+            Id        = e.Id,
+            Nombre    = e.Nombre,
+            Apellido  = e.Apellido,
+            Matricula = e.Matricula,
+            Estado    = e.Estado.ToString()
+        };
 
-                Documento = estudiante.Documento,
-
-                Estado = estudiante.Estado.ToString()
-            };
-        }
-    }
+    public static Estudiante ToEntity(this EstudianteFormDto dto)
+        => new()
+        {
+            Nombre    = dto.Nombre,
+            Apellido  = dto.Apellido,
+            Matricula = dto.Matricula,
+            Email     = dto.Email,
+            Estado    = dto.Estado
+        };
 }

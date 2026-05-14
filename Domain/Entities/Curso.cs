@@ -1,11 +1,13 @@
-namespace Domain.Entities
+namespace MiProyectoAcademico.Domain.Entities;
+
+public class Curso
 {
-    public class Curso
-    {
-        public int Id { get; set; }
+    public int    Id       { get; set; }
+    public string Nombre   { get; set; } = string.Empty;
+    public string Codigo   { get; set; } = string.Empty;   // Ej: "IRI-005"
+    public int    Creditos { get; set; }
+    public bool   Activo   { get; set; } = true;
 
-        public string Nombre { get; set; } = string.Empty;
-
-        public int Creditos { get; set; }
-    }
+    // 1:N → un Curso tiene muchas Matriculaciones
+    public ICollection<Matriculacion> Matriculaciones { get; set; } = new List<Matriculacion>();
 }

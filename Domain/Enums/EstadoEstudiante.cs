@@ -1,8 +1,9 @@
-namespace Domain.Enums
+namespace MiProyectoAcademico.Domain.Enums;
+
+public enum EstadoEstudiante
 {
-    public enum EstadoEstudiante
-    {
-        Activo = 1,
-        Inactivo = 2
-    }
+    Activo    = 1,
+    Inactivo  = 2,
+    Egresado  = 3,
+    Suspendido = 4
 }
