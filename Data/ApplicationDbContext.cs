@@ -2,8 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using MiProyectoAcademico.Domain.Entities;
 
-namespace MiProyectoAcademico.Data
-{
+    namespace MiProyectoAcademico.Data;
     public class ApplicationDbContext
     (DbContextOptions<ApplicationDbContext> options) :
      IdentityDbContext<ApplicationUser> (options)
@@ -20,4 +19,3 @@ namespace MiProyectoAcademico.Data
             return base.SaveChangesAsync(cancellationToken);
         }
     }
-}
