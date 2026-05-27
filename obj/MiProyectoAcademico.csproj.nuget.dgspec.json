@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\lp3\\test\\MiProyectoAcademico\\MiProyectoAcademico.csproj": {}
+    "C:\\lp3\\MiProyectoAcademico\\MiProyectoAcademico.csproj": {}
   },
   "projects": {
-    "C:\\lp3\\test\\MiProyectoAcademico\\MiProyectoAcademico.csproj": {
+    "C:\\lp3\\MiProyectoAcademico\\MiProyectoAcademico.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\lp3\\test\\MiProyectoAcademico\\MiProyectoAcademico.csproj",
+        "projectUniqueName": "C:\\lp3\\MiProyectoAcademico\\MiProyectoAcademico.csproj",
         "projectName": "MiProyectoAcademico",
-        "projectPath": "C:\\lp3\\test\\MiProyectoAcademico\\MiProyectoAcademico.csproj",
+        "projectPath": "C:\\lp3\\MiProyectoAcademico\\MiProyectoAcademico.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\lp3\\test\\MiProyectoAcademico\\obj\\",
+        "outputPath": "C:\\lp3\\MiProyectoAcademico\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
