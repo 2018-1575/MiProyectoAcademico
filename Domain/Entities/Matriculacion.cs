@@ -1,4 +1,4 @@
-namespace MiProyectoAcademico.Domain.Entities;
+namespace LP3.BlazorServer.Domain.Entities;
 
 public class Matriculacion
 {

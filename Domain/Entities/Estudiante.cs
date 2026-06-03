@@ -1,6 +1,6 @@
-using MiProyectoAcademico.Domain.Enums;
+using LP3.BlazorServer.Domain.Enums;
 
-namespace MiProyectoAcademico.Domain.Entities;
+namespace LP3.BlazorServer.Domain.Entities;
 
 public class Estudiante
 {

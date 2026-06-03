@@ -1,21 +1,19 @@
-using Microsoft.EntityFrameworkCore;
+using LP3.BlazorServer.Domain.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using MiProyectoAcademico.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 
-    namespace MiProyectoAcademico.Data;
-    public class ApplicationDbContext
-    (DbContextOptions<ApplicationDbContext> options) :
-     IdentityDbContext<ApplicationUser> (options)
+namespace LP3.BlazorServer.Data;
+
+public class ApplicationDbContext
+(DbContextOptions<ApplicationDbContext> options) : 
+IdentityDbContext<ApplicationUser>(options)
+{
+    public DbSet<Estudiante> Estudiantes => Set<Estudiante>();
+    public DbSet<Curso> Cursos => Set<Curso>();
+    public DbSet<Matriculacion> Matriculaciones => Set<Matriculacion>();
+
+    public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
     {
-
-        public DbSet<Estudiante> Estudiantes { get; set; }
-
-        public DbSet<Curso> Cursos { get; set; }
-
-        public DbSet<Matriculacion> Matriculaciones { get; set; }
-
-        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
-        {
-            return base.SaveChangesAsync(cancellationToken);
-        }
+        return base.SaveChangesAsync(cancellationToken);
     }
+}
